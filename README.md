@@ -1,8 +1,9 @@
 # Debian Post-Install
 
-![](https://img.shields.io/github/repo-size/suflaj/debian-post-install&style=flat-square)
-![](https://img.shields.io/github/license/suflaj/debian-post-install&style=flat-square)
-![](https://img.shields.io/github/last-commit/suflaj/debian-post-install&style=flat-square)
+![](https://img.shields.io/github/repo-size/suflaj/debian-post-install?style=flat-square)
+![](https://img.shields.io/github/license/suflaj/debian-post-install?style=flat-square)
+![](https://img.shields.io/github/last-commit/suflaj/debian-post-install?style=flat-square)
+
 
 This repository contains files I personally use as post-install scripts.
 
