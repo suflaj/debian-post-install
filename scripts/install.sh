@@ -77,8 +77,11 @@ snap install \
 
 # Multimedia -----------------------------------------------------
 
+add-apt-repository ppa:easymodo/qimgv
+apt update -y
 apt install \
     obs-studio \    # OBS
+    qimgv \         # qimgv
     spotify \       # Spotify
     vlc \           # VLC
 -y
@@ -88,6 +91,7 @@ apt install \
     htop \          # htop
     p7zip-full \    # 7-zip
     powertop \      # Powertop
+    preload \       # Preload
     qbittorrent \   # qBitTorrent
     tar \           # tar
     thermald \      # Thermald
@@ -95,7 +99,8 @@ apt install \
     tlp-rdw \       # TLP Radio Device Wizard
 -y
 snap install \
-    onlyoffice-desktopeditors   # OnlyOffice
+    onlyoffice-desktopeditors \ # OnlyOffice
+    zenkit-todo                 # Zenkit To-Do
 
 
 # Fix Bluetooth sleep bug
