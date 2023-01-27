@@ -102,6 +102,7 @@ apt install \
 -y
 snap install \
     onlyoffice-desktopeditors \ # OnlyOffice
+    spectacle \                 # KDE Spectacle
     zenkit-todo                 # Zenkit To-Do
 
 
