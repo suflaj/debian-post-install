@@ -2,7 +2,6 @@
 
 EXTENSION_IDENTIFIERS=(\
     "13xforever.language-x86-64-assembly" \     # x86 highlighting
-    "akamud.vscode-theme-onedark" \             # Atom One Dark
     "dan-c-underwood.arm" \                     # ARM highlighting
     "file-icons.file-icons" \                   # File icons
     "grapecity.gc-excelviewer" \                # CSV viewer
@@ -24,6 +23,7 @@ EXTENSION_IDENTIFIERS=(\
     "vscode-icons-team.vscode-icons" \          # VSCode Icons
     "yzane.markdown-pdf" \                      # Markdown PDF
     "yzhang.markdown-all-in-one" \              # Markdown All in One
+    "zhuangtongfa.material-theme" \             # One Dark Pro
 )
 
 for extension in "${EXTENSION_IDENTIFIERS[@]}"; do
