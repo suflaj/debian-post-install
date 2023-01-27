@@ -82,8 +82,9 @@ snap install \
 add-apt-repository ppa:easymodo/qimgv
 apt update -y
 apt install \
+    elisa \         # Elisa Music Player
     obs-studio \    # OBS
-    qimgv \         # qimgv
+    qimgv \         # qimgv Image Viewer
     spotify \       # Spotify
     vlc \           # VLC
 -y
