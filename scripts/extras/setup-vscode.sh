@@ -18,6 +18,7 @@ EXTENSION_IDENTIFIERS=(\
     "sirtori.indenticator" \                    # Indenticator
     "stkb.rewrap" \                             # Rewrap text
     "streetsidesoftware.code-spell-checker" \   # Spell checker
+    "stuart.unique-window-colors" \             # Window Colors
     "tyriar.sort-lines" \                       # Sort lines
     "usernamehw.errorlens" \                    # Error Lens
     "vscode-icons-team.vscode-icons" \          # VSCode Icons
