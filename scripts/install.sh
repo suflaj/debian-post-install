@@ -97,6 +97,7 @@ apt install \
     preload \       # Preload
     qbittorrent \   # qBitTorrent
     screen \        # GNU Screen
+    stacer \        # Stacer cleanup
     tar \           # tar
     thermald \      # Thermald
     tlp \           # TLP
