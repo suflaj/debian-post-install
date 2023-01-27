@@ -95,6 +95,7 @@ apt install \
     powertop \      # Powertop
     preload \       # Preload
     qbittorrent \   # qBitTorrent
+    screen \        # GNU Screen
     tar \           # tar
     thermald \      # Thermald
     tlp \           # TLP
