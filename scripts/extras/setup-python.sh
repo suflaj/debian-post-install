@@ -30,6 +30,7 @@ PYTHON_NAMES=( \
 
 # Python dependencies --------------------------------------------
 apt update -y
+apt upgrade -y
 apt install \
     build-essential \
     gdb \
