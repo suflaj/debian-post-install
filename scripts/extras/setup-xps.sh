@@ -10,7 +10,7 @@ fi
 
 # Update the repo
 apt update -y
-apt upgrade
+apt upgrade -y
 
 # Intel MicroCode
 apt install \
