@@ -68,8 +68,8 @@ snap install \
 # Communication --------------------------------------------------
 snap install \
     discord \               # Discord
+    mailspring \            # Mailspring
     telegram-desktop \      # Telegram
-    thunderbird \           # Thunderbird
     whatsapp-for-linux \    # WhatsApp
     zoom-client \           # Zoom
 
