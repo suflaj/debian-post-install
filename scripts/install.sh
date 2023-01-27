@@ -54,7 +54,9 @@ snap install \
 
 bash "${PARENT}/extras/setup-edge-repo.sh"
 apt update -y
-apt install microsoft-edge-stable   # Microsoft Edge
+apt install \
+    microsoft-edge-stable   # Microsoft Edge
+-y
 
 # Coding ---------------------------------------------------------
 snap install \
