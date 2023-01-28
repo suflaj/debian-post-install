@@ -1,15 +1,6 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Must run as root"
-    exit 1
-fi
-
 __USER__="suflaj"
-HOME="/home/${__USER__}"
-
-MINICONDA_URL=\
-"https://repo.anaconda.com/miniconda/Miniconda3-py310_22.11.1-1-Linux-x86_64.sh"
 
 PYTHON_SOURCES=( \
     "https://www.python.org/ftp/python/3.11.1/Python-3.11.1.tgz" \
@@ -28,9 +19,16 @@ PYTHON_NAMES=( \
     "3.4" \
 )
 
-# Python dependencies --------------------------------------------
+if [ "$EUID" -ne 0 ]; then
+    echo "Must run as root"
+    exit 1
+fi
+
+# Update & upgrade -----------------------------------------------
 apt update -y
 apt upgrade -y
+
+# Python dependencies --------------------------------------------
 apt install \
     build-essential \
     gdb \
@@ -52,38 +50,30 @@ apt install \
     zlib1g-dev \
 -y
 
+# Temporary folder setup -----------------------------------------
+TEMP="${HOME}/__temp__setup-python"
+mkdir -p "${TEMP}"
 
-TEMP="${HOME}/__temp-setup-python__"
-rm -rfI "${TEMP}"
-mkdir "${TEMP}"
-
-INSTALLER_NAME="miniconda-installer.sh"
-INSTALLER_PATH="${TEMP}/${INSTALLER_NAME}"
-PREFIX="${HOME}/programs/miniconda"
-
-wget ${MINICONDA_URL} \
-    -O "${INSTALLER_PATH}"
-bash "${TEMP}" -b -p "${PREFIX}"
-mv "${INSTALLER_PATH}" "${PREFIX}/${INSTALLER_NAME}"
-eval "$("$PREFIX}/bin/conda" shell.bash hook)"
-
+# Python installations -------------------------------------------
 for i in "${!PYTHON_SOURCES[@]}"; do
     url="${PYTHON_SOURCES[i]}"
     name="${PYTHON_NAMES[i]}"
     path="${TEMP}/${name}"
+    prefix="${HOME}/programs/python/${name}"
 
     wget "${url}" -O "${path}.tgz"
-
     tar xf "${path}.tgz"
-    cd "${path}"
+    rm -f "${path}.tgz"
 
+    cd "${path}"
     bash ./configure \
-        --prefix "${HOME}/programs/python/${name}" \
+        --prefix "${prefix}" \
         --enable-optimizations \
         --with-ensurepip=install
     make -j4
     make install
-done
+    chown -R "${__USER__}:${__USER__}" "${prefix}"
 
-rm -rf "${TEMP}"
-chown -R "${__USER__}:${__USER__}" "${HOME}/programs/python"
+    cd ..
+    rm -rf "${path}"
+done
