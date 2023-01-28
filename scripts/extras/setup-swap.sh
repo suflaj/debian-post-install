@@ -1,6 +1,7 @@
 #/bin/bash
 
 SWAP_PATH="/swap"
+SWAPPINESS=5
 
 if [ "$EUID" -ne 0 ]; then
     echo "Must run as root"
@@ -14,6 +15,5 @@ mkswap "${SWAP_PATH}"
 cp /etc/fstab /etc/fstab.old
 echo "${SWAP_PATH} none swap sw 0 02" | tee -a /etc/fstab
 
-printf 'Run `sudo nano /etc/sysctl.conf`\n'
-printf 'Append `vm.swappiness=5`\n'
-printf "Can't be bothered scripting this bs\n"
+sed -r '/^vm\.swappiness=[0-9]+$/d' /etc/sysctl.conf | sudo tee /etc/sysctl.conf
+echo "vm.swappiness=${SWAPPINESS}" | tee -a /etc/sysctl.conf
