@@ -11,7 +11,6 @@ SCRIPTS_DIR=$(dirname "$THIS")
 TWEAK_PATHS=(
     "${SCRIPTS_DIR}/tweaks/tweak-grub.sh"
     "${SCRIPTS_DIR}/tweaks/tweak-intel.sh"
-    "${SCRIPTS_DIR}/tweaks/tweak-performance.sh"
     "${SCRIPTS_DIR}/tweaks/tweak-power.sh"
 )
 
