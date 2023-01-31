@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Make sure to go through these scripts and change _USER to your 
+# user name:
+#
+#   scripts/tools/setup-conda.sh
+#   scripts/tools/setup-cuda.sh
+#   scripts/tools/setup-docker.sh
+#   scripts/tools/setup-python.sh
+
 if [ "$EUID" -ne 0 ]; then
     echo "Must run as root"
     exit 1
