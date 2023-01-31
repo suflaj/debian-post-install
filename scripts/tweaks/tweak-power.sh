@@ -22,6 +22,3 @@ sed '/RESTORE_DEVICE_STATE_ON_STARTUP/s/=.*/=1/' \
 echo "PCIE_ASPM_ON_BAT=powersupersave" \
     tee -a "/etc/tlp.conf"
 systemctl restart tlp
-
-systemctl enable powertop
-powertop --auto-tune
