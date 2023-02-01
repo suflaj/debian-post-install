@@ -22,7 +22,6 @@ EXTENSION_IDENTIFIERS=(\
     "shd101wyy.markdown-preview-enhanced"   # Markdown preview
     "sirtori.indenticator"                  # Indenticator
     "stkb.rewrap"                           # Rewrap text
-    "streetsidesoftware.code-spell-checker" # Spell checker
     "stuart.unique-window-colors"           # Window Colors
     "tyriar.sort-lines"                     # Sort lines
     "usernamehw.errorlens"                  # Error Lens
