@@ -12,6 +12,7 @@ APT_APPS=(
     powertop
     qbittorrent
     screen
+    sensors
     stacer
     tar
 )
