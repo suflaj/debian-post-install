@@ -8,6 +8,7 @@ fi
 APT_APPS=(
     acpi
     htop
+    nvtop
     p7zip
     powertop
     qbittorrent
