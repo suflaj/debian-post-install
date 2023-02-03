@@ -10,15 +10,7 @@ SNAP_APPS=(
     mailspring
     telegram-desktop
     whatsapp-for-linux
-    zoom-client
 )
 for app in "${SNAP_APPS[@]}"; do
     snap install "${app}"
-done
-
-SNAP_APPS=(
-    slack
-)
-for app in "${SNAP_APPS[@]}"; do
-    snap install "${app}" --classic
 done
