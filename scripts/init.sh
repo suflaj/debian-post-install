@@ -30,6 +30,10 @@
 # Then, add yourself under the line starting with root ALL=, ex.:
 #   suflaj ALL=(ALL:ALL) ALL
 #
+# Save the changes with CTRL+S, and exit with CTRL+X.
+#
+#
+#
 # After that, you should be able to use sudo, this script, and 
 # other ones.
 
