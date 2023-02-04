@@ -16,7 +16,22 @@
 #   nmcli d wifi connect SSID password PASSWORD
 # Congratulations, you're connected to the internet via WiFi.
 #
-# Now you can use this script (and further ones).
+#
+#
+# The last part is making sure that sudo is installed. If it 
+# isn't then do the following:
+#   su
+#   apt install sudo -y
+#
+# Then you'll need to add your user to sudoers. First, open the 
+# sudoers file:
+#   nano /etc/sudoers
+#
+# Then, add yourself under the line starting with root ALL=, ex.:
+#   suflaj ALL=(ALL:ALL) ALL
+#
+# After that, you should be able to use sudo, this script, and 
+# other ones.
 
 if [ "$EUID" -ne 0 ]; then
     echo "Must run as root"
