@@ -5,9 +5,12 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
+# I also use Comic Code, but it's not free
 APT_APPS=(
     fonts-crosextra-caladea     # Cambria replacement
     fonts-crosextra-carlito     # Calibri replacement
+    fonts-jetbrains-mono        # JetBrains Mono
+    fonts-noto                  # Noto font metapackage
 )
 
 apt update -y
