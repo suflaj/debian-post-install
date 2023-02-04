@@ -11,7 +11,7 @@ if [[ $# -eq 1 ]]; then
 elif [[ $# -eq 2 ]]; then
     _USER="$2"
 elif [[ $# -gt 2 ]]; then
-    printf "This scripts takes 0 or 1 parameters!\n"
+    printf "This scripts takes up to 2 parameters!\n"
     exit 1
 fi
 
