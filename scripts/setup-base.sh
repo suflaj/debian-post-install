@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make sure to go through these scripts and change _USER to your 
-# user name::
+# user name:
 #
 #   scripts/apps/setup-latte.sh
 
