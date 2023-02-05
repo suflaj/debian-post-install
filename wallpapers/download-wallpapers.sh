@@ -3,7 +3,7 @@
 THIS=$(realpath $0)
 WALLPAPERS_DIR="$(dirname "$THIS")"
 
-DESTINATION_FOLDER="${HOME}/wallpapers"
+DESTINATION_FOLDER="$(xdg-user-dir PICTURES)/wallpapers"
 _USER=""
 
 if [[ $# -eq 1 ]]; then
