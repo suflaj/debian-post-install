@@ -31,6 +31,6 @@ for i in "${!COMPONENTS[@]}"; do
 
     eval new_path_raw="${new_path}"
     mkdir -p "${new_path_raw}"
-    mv "$(xdg.user-dir ${component})" "${new_path}"
+    mv "$(xdg-user-dir ${component})" "${new_path}"
     sed -i "s|^${var_name}=.*$|${var_name}=\"${new_path}\"|" "${USER_DIRS_PATH}"
 done
