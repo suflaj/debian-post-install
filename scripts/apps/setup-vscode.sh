@@ -21,7 +21,6 @@ EXTENSION_IDENTIFIERS=(\
     "oderwat.indent-rainbow"                # Rainbow indentation
     "shd101wyy.markdown-preview-enhanced"   # Markdown preview
     "sirtori.indenticator"                  # Indenticator
-    "stkb.rewrap"                           # Rewrap text
     "stuart.unique-window-colors"           # Window Colors
     "tyriar.sort-lines"                     # Sort lines
     "usernamehw.errorlens"                  # Error Lens
