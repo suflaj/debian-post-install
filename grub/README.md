@@ -2,7 +2,7 @@
 
 I use the [Sleek Theme: Dark](https://github.com/sandesh236/sleek--themes) by [sandesh236](https://github.com/sandesh236).
 
-## Installation
+## Usage
 
 Unpack the `grub/themes/sleek-theme-dark.tar.xz` file:
 
