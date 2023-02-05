@@ -10,7 +10,7 @@ Please make sure to support the artists if you like these images.
 
 ## Usage
 
-To download the folders to your `~/wallpapers` folder, simply run
+To download the folders to your `$PICTURES/wallpapers` folder, simply run
 
 ```bash
 bash wallpapers/download-wallpapers.sh
