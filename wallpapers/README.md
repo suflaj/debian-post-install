@@ -21,10 +21,3 @@ It's also possible to change the destination folder by passing an argument:
 ```bash
 bash wallpapers/download-wallpapers.sh /the/path/you/want
 ```
-
-If that location requires `root` permissions, you can call it with `sudo`, and then pass
-the `user` as the 2nd parameter to chown the destination for recursively:
-
-```bash
-sudo bash wallpapers/download-wallpapers.sh /path/requiring/root user
-```

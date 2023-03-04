@@ -1,29 +1,40 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]; then
-    echo "Must run as root"
-    exit 1
-fi
+#   Copyright 2023 Miljenko Šuflaj
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
 
 THIS=$(realpath $0)
 SCRIPTS_DIR=$(dirname "$THIS")
-
 SETUP_PATHS=(
-    "${SCRIPTS_DIR}/system/setup-package-managers.sh"
+    "${SCRIPTS_DIR}/tools/package-managers/setup.sh"
     "${SCRIPTS_DIR}/system/setup-essentials.sh"
-    "${SCRIPTS_DIR}/system/setup-fingerprint.sh"
     "${SCRIPTS_DIR}/system/setup-restricted.sh"
     "${SCRIPTS_DIR}/system/setup-firewall.sh"
     "${SCRIPTS_DIR}/system/setup-swap.sh"
 )
 
-apt update -y
-apt upgrade -y
+sudo apt update -y -qq \
+    > /dev/null 2>&1
+sudo apt upgrade -y -qq \
+    > /dev/null 2>&1
 
-apt install software-properties-common -y
-apt-add-repository contrib
-apt-add-repository non-free
-apt update -y
+sudo apt install software-properties-common -y -qq \
+    > /dev/null 2>&1
+sudo apt-add-repository contrib > /dev/null
+sudo apt-add-repository non-free > /dev/null
+sudo apt update -y -qq \
+    > /dev/null 2>&1
 
 for path in "${SETUP_PATHS[@]}"; do
     bash "${path}"

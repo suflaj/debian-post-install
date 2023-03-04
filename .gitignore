@@ -1,0 +1,5 @@
+# Ignore VSCode settings
+.vscode
+
+# Ignore folders, but not the tarballs.
+grub/themes/*/

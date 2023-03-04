@@ -1,0 +1,77 @@
+#!/bin/bash
+
+#   Copyright 2023 Miljenko Šuflaj
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+
+function pip-embargo {
+    if [[ -z "${CONDA_DEFAULT_ENV}" || "${CONDA_DEFAULT_ENV}" == "base" ]]; then
+        if [[ -z "${IGNORE_PIP_EMBARGO}" ]]; then
+            printf "Running "
+            printf "\033[0;94mpip\033[0m "
+            printf "has been "
+            printf "\033[4;91mdisabled\033[0m "
+            printf "outside of a "
+            printf "\033[0;92muser Conda environment\033[0m"
+            printf ".\n"
+
+            printf "To override this, set "
+            printf "\033[0;96mIGNORE_PIP_EMBARGO\033[0m to something.\n"
+
+            return 1
+        else
+            return 0
+        fi
+    fi
+
+    return 0
+}
+function _pip {
+    pip_path="$(which pip)"
+    if [[ -z "${pip_path}" ]]; then
+        printf "bash: pip: command not found\n" >&2
+        return 1
+    fi
+
+    pip-embargo
+    if [[ "$?" == 0 ]]; then
+        "${pip_path}" "$@"
+    fi
+}
+function _pip2 {
+    pip_path="$(which pip2)"
+    if [[ -z "${pip_path}" ]]; then
+        printf "bash: pip2: command not found\n" >&2
+        return 1
+    fi
+
+    pip-embargo
+    if [[ "$?" == 0 ]]; then
+        "${pip_path}" "$@"
+    fi
+}
+function _pip3 {
+    pip_path="$(which pip3)"
+    if [[ -z "${pip_path}" ]]; then
+        printf "bash: pip3: command not found\n" >&2
+        return 1
+    fi
+
+    pip-embargo
+    if [[ "$?" == 0 ]]; then
+        "${pip_path}" "$@"
+    fi
+}
+alias pip=_pip
+alias pip2=_pip2
+alias pip3=_pip3

@@ -4,14 +4,15 @@ I use the [Sleek Theme: Dark](https://github.com/sandesh236/sleek--themes) by [s
 
 ## Usage
 
-Unpack the `grub/themes/sleek-theme-dark.tar.xz` file:
+Run the following to install the theme:
 
 ```bash
-tar -zxf grub/themes/sleek-theme-dark.tar.xz
+cd grub/themes
+mkdir sleek-dark
+tar -xf sleek-dark.tar.xz -C sleek-dark
+cd sleek-dark
+sudo bash install.sh
 ```
 
-Run the unpacked `install.sh` file as `root`:
+Then, follow the instructions on the screen.
 
-```bash
-sudo bash grub/themes/install.sh
-```
