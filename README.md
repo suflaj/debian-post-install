@@ -70,3 +70,8 @@ Read the [GRUB README](./grub/README.md) to find out more.
 ### Wallpapers
 
 Read the [Wallpapers README](./wallpapers/README.md) to find out more.
+
+## To do
+
+- setup KDE fully and share the dotfiles
+- setup Latte fully and share the dotfiles
