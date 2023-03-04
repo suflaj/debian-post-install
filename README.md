@@ -40,6 +40,8 @@ This is likely the thing you want to run third. This will:
 - setup Google Chrome
 - setup Microsoft Edge (yes, I use both, but mainly Edge)
 - setup a few apps I use for communication, multimedia and productivity
+- setup Flameshot and the shortcuts for it
+- setup Spotify
 - setup Visual Studio Code and some extensions I use
 - setup the nVidia drivers
 - setup Conda (`miniconda3`)
