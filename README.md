@@ -42,6 +42,7 @@ This is likely the thing you want to run third. This will:
 - setup a few apps I use for communication, multimedia and productivity
 - setup Flameshot and the shortcuts for it
 - setup Spotify
+- setup Ulauncher
 - setup Visual Studio Code and some extensions I use
 - setup the nVidia drivers
 - setup Conda (`miniconda3`)
