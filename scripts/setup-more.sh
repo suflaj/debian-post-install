@@ -22,6 +22,7 @@ SETUP_PATHS=(
     "${SCRIPTS_DIR}/apps/flameshot/setup.sh"
     "${SCRIPTS_DIR}/apps/misc/setup.sh"
     "${SCRIPTS_DIR}/apps/spotify/setup.sh"
+    "${SCRIPTS_DIR}/apps/ulauncher/setup.sh"
     "${SCRIPTS_DIR}/apps/vscode/setup.sh"
     "${SCRIPTS_DIR}/tools/nvidia/setup.sh"
     "${SCRIPTS_DIR}/tools/conda/setup.sh"
