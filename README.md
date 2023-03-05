@@ -76,3 +76,4 @@ Read the [Wallpapers README](./wallpapers/README.md) to find out more.
 
 - setup KDE fully and share the dotfiles
 - setup Latte fully and share the dotfiles
+- setup VSCode fully and share the config files
