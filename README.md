@@ -8,7 +8,7 @@ This repository contains files I personally use as post-install scripts.
 
 ## Guides
 
-- [Debian 11 installation guide](./guides/debian-installation.md)
+- [Debian installation](./guides/debian-installation.md)
 - [Connecting to the internet](./guides/connecting-to-the-internet.md)
 - [Setting up `sudo`](./guides/setting-up-sudo.md)
 
