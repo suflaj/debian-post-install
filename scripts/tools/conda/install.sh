@@ -1,6 +1,6 @@
 #/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ source "${THIS_DIR}/.config"
 if [[ "$(ls -1 ${CONDA_PREFIX} | wc -l)" -le 1 ]]; then
     bash "${CONDA_INSTALLER_PATH}" \
         -u -b -p "${CONDA_PREFIX}" \
-    > /dev/null
+    > /dev/null 2>&1
 fi
 
 printf ":: Done\n"

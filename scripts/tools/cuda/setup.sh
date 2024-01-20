@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -17,8 +17,6 @@
 THIS="$(realpath $0)"
 THIS_DIR="$(dirname $THIS)"
 
-bash "${THIS_DIR}/add-sources.sh"
-bash "${THIS_DIR}/download.sh"
 bash "${THIS_DIR}/install.sh"
 
 printf "\n"

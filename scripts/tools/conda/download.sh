@@ -1,6 +1,6 @@
 #/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ source "${THIS_DIR}/.config"
 mkdir -p "${CONDA_PREFIX}"
 if [[ ! -f "${CONDA_INSTALLER_PATH}" ]]; then
     wget "${CONDA_SOURCE}" \
-        -q0 "${CONDA_INSTALLER_PATH}" \
+        -qO "${CONDA_INSTALLER_PATH}" \
     > /dev/null
 fi
 

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -16,26 +16,7 @@
 
 printf "[Latte] install.sh "
 
-if [[ "$(id -u)" -eq 0 ]]; then
-    printf ":: Error (run without root)"
-    exit 1
-fi
-
-THIS=$(realpath $0)
-THIS_DIR="$(dirname ${THIS})"
-source "${THIS_DIR}/.config"
-
-mkdir -p "${LATTE_INSTALL_DIR}"
-if [[ ! -f "${LATTE_INSTALL_DIR}/install.sh" ]]; then
-    git clone "${LATTE_SOURCE}" "${LATTE_INSTALL_DIR}"
-fi
-
-cd "${LATTE_INSTALL_DIR}"
-if [[ ! "$(git branch | grep ${LATTE_BRANCH})" =~ ^\*.* ]]; then
-    git checkout -b debian-stable "${LATTE_LAST_BULLSEYE_COMMIT}"
-fi
-
-bash install.sh \
-    > /dev/null
+sudo apt install latte-dock -y -qq \
+    > /dev/null 2>&1
 
 printf ":: Done\n"

@@ -8,7 +8,7 @@ This repository contains files I personally use as post-install scripts.
 
 ## Guides
 
-- [Debian 11 installation guide](./guides/debian-11-installation-guide.md)
+- [Debian 11 installation guide](./guides/debian-installation.md)
 - [Connecting to the internet](./guides/connecting-to-the-internet.md)
 - [Setting up `sudo`](./guides/setting-up-sudo.md)
 
@@ -22,7 +22,6 @@ First, this script will update `apt` and upgrade all packages. Then, it installs
 - setup essential packages for the rest of the installation and smooth operation
 - setup restricted packages
 - setup a basic firewall
-- setup 8 GB of swap (you can change that [here](./scripts/system/.config))
 
 ### `setup-base.sh`
 
@@ -46,17 +45,16 @@ This is likely the thing you want to run third. This will:
 - setup Visual Studio Code and some extensions I use
 - setup the nVidia drivers
 - setup Conda (`miniconda3`)
-- setup CUDA (version `12.0`)
+- setup CUDA toolkit
 - setup Docker
 - setup a few useful tools
-- setup Python (latest Python `2.7` and `3.X`, among others) and [`pip-embargo`](./scripts/tools/python/.pip-embargo)
+- setup [`pip-embargo`](./scripts/tools/python/.pip-embargo)
 
 ### `setup-tweaks.sh`
 
 This is likely the thing you want to run fourth. Or you might not want to run this at all. This will:
 
 - tweak GRUB (add some settings to GRUB, most importantly change the timeout)
-- tweak the Home folders (ex. `~/Pictures` -> `~/documents/pictures`)
 - tweak stuff related to Intel CPU and GPU
 - tweak stuff related to power consumption
 

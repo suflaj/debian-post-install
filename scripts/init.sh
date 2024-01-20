@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -21,19 +21,13 @@ SETUP_PATHS=(
     "${SCRIPTS_DIR}/system/setup-essentials.sh"
     "${SCRIPTS_DIR}/system/setup-restricted.sh"
     "${SCRIPTS_DIR}/system/setup-firewall.sh"
-    "${SCRIPTS_DIR}/system/setup-swap.sh"
 )
 
 sudo apt update -y -qq \
     > /dev/null 2>&1
 sudo apt upgrade -y -qq \
     > /dev/null 2>&1
-
 sudo apt install software-properties-common -y -qq \
-    > /dev/null 2>&1
-sudo apt-add-repository contrib > /dev/null
-sudo apt-add-repository non-free > /dev/null
-sudo apt update -y -qq \
     > /dev/null 2>&1
 
 for path in "${SETUP_PATHS[@]}"; do

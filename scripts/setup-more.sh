@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   Copyright 2023 Miljenko Šuflaj
+#   Copyright 2024 Miljenko Šuflaj
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -29,7 +29,6 @@ SETUP_PATHS=(
     "${SCRIPTS_DIR}/tools/cuda/setup.sh"
     "${SCRIPTS_DIR}/tools/docker/setup.sh"
     "${SCRIPTS_DIR}/tools/setup-misc.sh"
-    "${SCRIPTS_DIR}/tools/python/setup.sh"
 )
 
 apt update -y -qq \
