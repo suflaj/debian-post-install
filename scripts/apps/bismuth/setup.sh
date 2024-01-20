@@ -17,7 +17,6 @@
 THIS="$(realpath $0)"
 THIS_DIR="$(dirname $THIS)"
 
-bash "${THIS_DIR}/add-sources.sh"
 bash "${THIS_DIR}/install.sh"
 
 printf "\n"

@@ -16,7 +16,9 @@
 
 printf "[Google Chrome] install.sh "
 
-sudo apt update -y -qq > /dev/null 2>&1
-sudo apt install google-chrome-stable -y -qq > /dev/null 2>&1
+sudo apt update -y -qq \
+    > /dev/null 2>&1
+sudo apt install google-chrome-stable -y -qq \
+    > /dev/null 2>&1
 
 printf ":: Done\n"

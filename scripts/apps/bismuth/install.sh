@@ -16,7 +16,7 @@
 
 printf "[Bismuth] install.sh "
 
-sudo apt update -y -qq > /dev/null 2>&1
-sudo apt install kwin-bismuth -y -qq > /dev/null 2>&1
+sudo apt install kwin-bismuth -y -qq \
+    > /dev/null 2>&1
 
 printf ":: Done\n"

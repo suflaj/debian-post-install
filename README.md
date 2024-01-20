@@ -22,7 +22,6 @@ First, this script will update `apt` and upgrade all packages. Then, it installs
 - setup essential packages for the rest of the installation and smooth operation
 - setup restricted packages
 - setup a basic firewall
-- setup 8 GB of swap (you can change that [here](./scripts/system/.config))
 
 ### `setup-base.sh`
 
@@ -49,14 +48,13 @@ This is likely the thing you want to run third. This will:
 - setup CUDA (version `12.0`)
 - setup Docker
 - setup a few useful tools
-- setup Python (latest Python `2.7` and `3.X`, among others) and [`pip-embargo`](./scripts/tools/python/.pip-embargo)
+- setup [`pip-embargo`](./scripts/tools/python/.pip-embargo)
 
 ### `setup-tweaks.sh`
 
 This is likely the thing you want to run fourth. Or you might not want to run this at all. This will:
 
 - tweak GRUB (add some settings to GRUB, most importantly change the timeout)
-- tweak the Home folders (ex. `~/Pictures` -> `~/documents/pictures`)
 - tweak stuff related to Intel CPU and GPU
 - tweak stuff related to power consumption
 

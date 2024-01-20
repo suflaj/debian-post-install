@@ -28,7 +28,7 @@ source "${THIS_DIR}/.config"
 if [[ "$(ls -1 ${CONDA_PREFIX} | wc -l)" -le 1 ]]; then
     bash "${CONDA_INSTALLER_PATH}" \
         -u -b -p "${CONDA_PREFIX}" \
-    > /dev/null
+    > /dev/null 2>&1
 fi
 
 printf ":: Done\n"

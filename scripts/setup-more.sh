@@ -29,7 +29,6 @@ SETUP_PATHS=(
     "${SCRIPTS_DIR}/tools/cuda/setup.sh"
     "${SCRIPTS_DIR}/tools/docker/setup.sh"
     "${SCRIPTS_DIR}/tools/setup-misc.sh"
-    "${SCRIPTS_DIR}/tools/python/setup.sh"
 )
 
 apt update -y -qq \

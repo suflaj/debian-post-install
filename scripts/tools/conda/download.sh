@@ -28,7 +28,7 @@ source "${THIS_DIR}/.config"
 mkdir -p "${CONDA_PREFIX}"
 if [[ ! -f "${CONDA_INSTALLER_PATH}" ]]; then
     wget "${CONDA_SOURCE}" \
-        -q0 "${CONDA_INSTALLER_PATH}" \
+        -qO "${CONDA_INSTALLER_PATH}" \
     > /dev/null
 fi
 

@@ -14,32 +14,9 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-printf "[CUDA] install.sh "
+printf "[CUDA] install.sh (might take a while) "
 
-if [[ "$(id -u)" -eq 0 ]]; then
-    printf ":: Error (run without root)\n"
-    exit 1
-fi
-
-THIS="$(realpath $0)"
-THIS_DIR="$(dirname ${THIS})"
-source "${THIS_DIR}/.config"
-
-if [[ ! -d '/usr/local/cuda' ]]; then
-    sudo dpkg -i "${CUDA_INSTALLER_PATH}"
-fi
-
-cuda_keyrings=$(ls -1 "${CUDA_KEY_DIR}"/cuda-*-keyring.gpg)
-cuda_keyrings=$(basename "${cuda_keyrings}")
-share_keyrings=$(ls -1 /usr/share/keyrings/cuda-*-keyring.gpg)
-share_keyrings=$(basename "${share_keyrings}")
-if [[ "${cuda_keyrings}" != "${share_keyrings}" ]]; then
-    sudo cp "${CUDA_KEY_DIR}"/cuda-*-keyring.gpg '/usr/share/keyrings/'
-    sudo apt update -y -qq \
-        > /dev/null 2>&1
-fi
-
-sudo apt install cuda -y -qq \
+sudo apt install nvidia-cuda-toolkit -y -qq \
     > /dev/null 2>&1
 
 printf ":: Done\n"

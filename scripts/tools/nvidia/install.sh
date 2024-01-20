@@ -14,7 +14,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-printf "[NVIDIA] install.sh "
+printf "[NVIDIA] install.sh (might take a while) "
 
 sudo apt install nvidia-driver -y -qq \
     > /dev/null 2>&1

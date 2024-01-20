@@ -17,7 +17,6 @@
 THIS="$(realpath $0)"
 THIS_DIR="$(dirname $THIS)"
 
-bash "${THIS_DIR}/prepare.sh"
 bash "${THIS_DIR}/install.sh"
 
 printf "\n"
