@@ -8,7 +8,7 @@ This repository contains files I personally use as post-install scripts.
 
 ## Guides
 
-- [Debian 11 installation guide](./guides/debian-11-installation-guide.md)
+- [Debian 11 installation guide](./guides/debian-installation.md)
 - [Connecting to the internet](./guides/connecting-to-the-internet.md)
 - [Setting up `sudo`](./guides/setting-up-sudo.md)
 
@@ -45,7 +45,7 @@ This is likely the thing you want to run third. This will:
 - setup Visual Studio Code and some extensions I use
 - setup the nVidia drivers
 - setup Conda (`miniconda3`)
-- setup CUDA (version `12.0`)
+- setup CUDA toolkit
 - setup Docker
 - setup a few useful tools
 - setup [`pip-embargo`](./scripts/tools/python/.pip-embargo)
