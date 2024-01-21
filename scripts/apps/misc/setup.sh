@@ -18,6 +18,7 @@ THIS="$(realpath $0)"
 THIS_DIR="$(dirname $THIS)"
 
 bash "${THIS_DIR}/setup-communication.sh"
+bash "${THIS_DIR}/setup-multimedia.sh"
 bash "${THIS_DIR}/setup-productivity.sh"
 
 printf "\n"
