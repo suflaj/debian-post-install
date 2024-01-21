@@ -34,3 +34,4 @@ GRUB_CMDLINE_LINUX=""
 #GRUB_INIT_TUNE="480 440 1"
 
 GRUB_THEME="/usr/share/grub/themes/sleek/theme.txt"
+GRUB_DISABLE_OS_PROBER=false
