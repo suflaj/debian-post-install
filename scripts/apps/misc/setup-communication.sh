@@ -20,7 +20,7 @@ THIS=$(realpath $0)
 THIS_DIR="$(dirname ${THIS})"
 source "${THIS_DIR}/.config"
 
-sudo snap install $(echo ${MISC_COMMUNICATION_PACKAGES[@]}) \
+sudo snap install $(echo ${MISC_COMMUNICATION_SNAPS[@]}) \
     > /dev/null 2>&1
 
 printf ":: Done\n"
