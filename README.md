@@ -9,8 +9,6 @@ This repository contains files I personally use as post-install scripts.
 ## Guides
 
 - [Debian installation](./guides/debian-installation.md)
-- [Connecting to the internet](./guides/connecting-to-the-internet.md)
-- [Setting up `sudo`](./guides/setting-up-sudo.md)
 
 ### `init.sh`
 
