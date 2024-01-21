@@ -28,6 +28,7 @@ SETUP_PATHS=(
     "${SCRIPTS_DIR}/tools/conda/setup.sh"
     "${SCRIPTS_DIR}/tools/cuda/setup.sh"
     "${SCRIPTS_DIR}/tools/docker/setup.sh"
+    "${SCRIPTS_DIR}/tools/python/setup.sh"
     "${SCRIPTS_DIR}/tools/setup-misc.sh"
 )
 
